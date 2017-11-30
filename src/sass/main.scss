@@ -10,10 +10,15 @@ body {
   font-size: 16px;
 }
 
+.primary-color {
+  color: $main-color;
+}
+
 @import "_modules/preloader-menu.scss";
 
 .image-container-mainpage {
   position: relative;
+  width: 100%;
 
   .backdrop {
     background: $backdrop-color;
@@ -56,7 +61,7 @@ body {
 
   .main-page {
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
 }
 
