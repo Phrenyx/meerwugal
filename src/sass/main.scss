@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+$body-font: 'Raleway', sans-serif;
+$main-color: #fac07c;
+$backdrop-color: #000;
+
+body {
+  margin: 0;
+  font-family: $body-font;
+  font-size: 16px;
+}
+
+@import "_modules/preloader-menu.scss";
+
+.image-container-mainpage {
+  position: relative;
+
+  .backdrop {
+    background: $backdrop-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
+
+  .text {
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 500%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
+    -o-transform: translate(-50%,-50%); /** Opera **/
+    -moz-transform: translate(-50%,-50%); /** Firefox **/
+  }
+
+  #carrot {
+    position: absolute;
+    bottom: 30px;
+    width: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%); /** Chrome & Safari **/
+    -o-transform: translate(-50%); /** Opera **/
+    -moz-transform: translate(-50%); /** Firefox **/
+    cursor: pointer;
+    animation-name: schwebe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .main-page {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@keyframes schwebe {
+  0%   {bottom: 30px;}
+  25% {bottom: 10px;}
+  50% {bottom: 30px;}
+  75% {bottom: 10px;}
+  100% {bottom: 30px;}
+}
