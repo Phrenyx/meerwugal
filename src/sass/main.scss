@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: $body-font;
   font-size: 16px;
+  background: #E9E8E7; /*FFF5EE*/
 }
 
 .primary-color {
@@ -24,6 +25,7 @@ img {
 .image-container-mainpage {
   position: relative;
   width: 100%;
+  box-shadow: 0 6px 2px -2px gray;
 
   .backdrop {
     background: $backdrop-color;
@@ -70,48 +72,162 @@ img {
   }
 }
 
-section.start {
-  height: 500px;
-  position: relative;
+.piggy-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.gismo {
+    background: url(/image/profile/gismo.jpg);
+    background-size: cover;
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+  }
+
+  &.krumel {
+    background: url(/image/profile/krümel.jpg);
+    background-size: cover;
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+  }
+
+  &.lucy {
+    background: url(/image/profile/lucy.jpg);
+    background-size: cover;
+    background-position: -15px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.luna {
+    background: url(/image/profile/luna.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.lyn {
+    background: url(/image/profile/lyn.jpg);
+    background-size: cover;
+    background-position: -10px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.panda {
+    background: url(/image/profile/panda.jpg);
+    background-size: cover;
+    background-position: -10px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.paula {
+    background: url(/image/profile/paula.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.sheela {
+    background: url(/image/profile/sheela.jpg);
+    background-size: cover;
+    background-position: -12px 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+.icon-container {
+  margin: 50px 0;
 
   .piggy-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
-    left: -300px;
+    position: relative;
+    bottom: 0px;
+    border: 5px solid #3B3738;
+    transition: border-color 500ms ease-out;
+  }
 
-    &.fixed {
-      position: fixed;
-      top: 10px;
-      left: 50px;
-      right: 10px;
-      animation-name: fadeIn;
-      animation-duration: 1s;
+  .col {
+    &:hover {
+      .piggy-icon {
+          animation-name: hover-icon;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          position: absolute;
+          border-color: $main-color;
+          transition: border-color 500ms ease-out;
+      }
     }
+  }
 
-    &.fixedBottom {
-      bottom: 0px;
-      top: auto;
-      position: absolute;
-    }
+  .show-all-grid {
+    padding: 20px 0 0;
+    display: block;
+    cursor: pointer;
+  }
+}
 
-    &.fixedStart {
-      position: absolute !important;
-      left: -300px;
-      animation-name: fadeOut !important;
-      animation-duration: 1s !important;
+.picture-grid {
+  .grid-item {
+    width: 25%;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+
+    &:hover {
+      // border: 5px solid $main-color;
+      padding: 0px;
     }
   }
 }
 
+footer {
+  min-height: 300px;
+  background: #3B3738;
+  margin-top: 30px;
+  border-top: 5px solid $main-color;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #3B3738;
+  display: none;
+
+  i.fa-times {
+    color: $main-color;
+    font-size: 300%;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .content {
+    img {
+      max-height: 900px;
+    }
+  }
+}
+
+
 @keyframes schwebe {
-  0%   {bottom: 30px;}
+  0%  {bottom: 30px;}
   25% {bottom: 10px;}
   50% {bottom: 30px;}
   75% {bottom: 10px;}
   100% {bottom: 30px;}
+}
+
+@keyframes hover-icon {
+  0%  {bottom: 0px;}
+  25% {bottom: 30px;}
+  50% {bottom: 0px;}
+  75% {bottom: 30px;}
+  100% {bottom: 0px;}
 }
 
 @keyframes fadeIn {

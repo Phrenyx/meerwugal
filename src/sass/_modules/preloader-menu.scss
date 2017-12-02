@@ -81,7 +81,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #222;
+  background: #3B3738; //#222;
   z-index: 999;
 }
 
@@ -175,10 +175,23 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  column-count: 2;
+  column-gap: 100px;
 }
 
 .main-menu ul li {
   padding-bottom: 15px;
+  text-align: center;
+}
+
+.main-menu ul li .piggy-icon {
+  margin: 0 auto;
+  border: 5px solid #3B3738;
+}
+
+.main-menu ul li:hover .piggy-icon {
+  border-color: #fac07c;
+  transition: border-color 500ms ease-out;
 }
 
 .main-menu ul a {
