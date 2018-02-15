@@ -3,6 +3,7 @@
 $body-font: 'Raleway', sans-serif;
 $main-color: #fac07c;
 $backdrop-color: #000;
+$second-color: #3B3738;
 
 body {
   margin: 0;
@@ -72,6 +73,16 @@ img {
   }
 }
 
+.image-grid img {
+  transition: transform .2s;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.15);
+    transition: transform .2s;
+  }
+}
+
 .piggy-icon {
   width: 100px;
   height: 100px;
@@ -136,36 +147,6 @@ img {
   }
 }
 
-.icon-container {
-  margin: 50px 0;
-
-  .piggy-icon {
-    position: relative;
-    bottom: 0px;
-    border: 5px solid #3B3738;
-    transition: border-color 500ms ease-out;
-  }
-
-  .col {
-    &:hover {
-      .piggy-icon {
-          animation-name: hover-icon;
-          animation-duration: 4s;
-          animation-iteration-count: infinite;
-          position: absolute;
-          border-color: $main-color;
-          transition: border-color 500ms ease-out;
-      }
-    }
-  }
-
-  .show-all-grid {
-    padding: 20px 0 0;
-    display: block;
-    cursor: pointer;
-  }
-}
-
 .img-fluid {
   margin-top: 30px;
 }
@@ -176,7 +157,7 @@ img {
 }
 
 footer {
-  background: #3B3738;
+  background: $second-color;
   margin-top: 30px;
   border-top: 5px solid $main-color;
 
@@ -226,15 +207,6 @@ footer {
   75% {bottom: 10px;}
   100% {bottom: 30px;}
 }
-
-@keyframes hover-icon {
-  0%  {bottom: 0px;}
-  25% {bottom: 30px;}
-  50% {bottom: 0px;}
-  75% {bottom: 30px;}
-  100% {bottom: 0px;}
-}
-
 @keyframes fadeIn {
   0%   {left: -300px;}
   100% {left: 50px;}
