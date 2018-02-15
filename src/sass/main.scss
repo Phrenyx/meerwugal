@@ -166,25 +166,30 @@ img {
   }
 }
 
-.picture-grid {
-  .grid-item {
-    width: 25%;
-    padding: 5px;
-    cursor: pointer;
-    transition: all 200ms ease-out;
+.img-fluid {
+  margin-top: 30px;
+}
 
-    &:hover {
-      // border: 5px solid $main-color;
-      padding: 0px;
-    }
-  }
+.wow-removed {
+  visibility: visible !important;
+  animation-name: none !important;
 }
 
 footer {
-  min-height: 300px;
   background: #3B3738;
   margin-top: 30px;
   border-top: 5px solid $main-color;
+
+  .copyright {
+    display: block;
+    color: $main-color;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .image-modal {
@@ -194,7 +199,7 @@ footer {
   right: 0;
   bottom: 0;
   z-index: 999;
-  background: #3B3738;
+  background: rgba(59, 55, 56, 0.96);
   display: none;
 
   i.fa-times {
