@@ -44,7 +44,7 @@ img {
     z-index: 99;
     color: #fff;
     font-size: 500%;
-    top: 50%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
@@ -76,7 +76,7 @@ img {
 .image-grid img {
   transition: transform .2s;
   cursor: pointer;
-  
+
   &:hover {
     transform: scale(1.15);
     transition: transform .2s;
