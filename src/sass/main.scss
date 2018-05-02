@@ -145,6 +145,13 @@ img {
     background-position: -12px 0px;
     background-repeat: no-repeat;
   }
+
+  &.fynn {
+    background: url(/image/profile/fynn.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
 }
 
 .img-fluid {
@@ -199,6 +206,13 @@ footer {
   }
 }
 
+.sub {
+    padding: 20px 0;
+
+    .img-fluid {
+        margin-top: 0px;
+    }
+}
 
 @keyframes schwebe {
   0%  {bottom: 30px;}

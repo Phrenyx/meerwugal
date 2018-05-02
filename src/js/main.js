@@ -3,8 +3,8 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
-  $(".image-grid").lightGallery({selector: 'a'});
-  
+  $(".image-grid, .sub").lightGallery({selector: 'a'});
+
   $('.image-container-mainpage').height($(window).height());
 
   $('.icon-container .show-all-grid').click(function() {
