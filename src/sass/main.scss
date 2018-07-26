@@ -9,12 +9,22 @@ body {
   margin: 0;
   font-family: $body-font;
   font-size: 16px;
-  background: #E9E8E7; /*FFF5EE*/
+  background: #E9E8E7;
+  overflow-x: hidden;
 }
 
 .primary-color {
   color: $main-color;
 }
+
+a, a:visited {
+    color: inherit;
+
+    &:hover, &:active {
+        color: $main-color;
+    }
+}
+
 
 img {
   max-width: 100%;
@@ -167,6 +177,37 @@ footer {
   background: $second-color;
   margin-top: 30px;
   border-top: 5px solid $main-color;
+  padding: 50px 0;
+  color: white;
+
+  a, a:visited {
+      color: inherit;
+
+      &:hover, &:active {
+          color: $main-color;
+      }
+  }
+
+  i {
+      font-size: 30px !important;
+  }
+
+  ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+          list-style: none;
+
+          a {
+              text-decoration: none;
+
+              &:hover {
+                  text-decoration: none;
+              }
+          }
+      }
+  }
 
   .copyright {
     display: block;
@@ -206,11 +247,40 @@ footer {
   }
 }
 
-.sub {
+.sub, .sub-owner {
     padding: 20px 0;
 
     .img-fluid {
         margin-top: 0px;
+    }
+
+    .image-wrap {
+        img {
+            visibility: visible;
+            animation-name: bounceInRight;
+            height: 270px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .wugal {
+        padding: 10px 0 30px;
+
+        .text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .profile {
+        img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            margin: 30px 0;
+        }
     }
 }
 
@@ -229,4 +299,41 @@ footer {
 @keyframes fadeOut {
   0%   {left: 50px;}
   100% {left: -300px;}
+}
+
+
+@media (max-width: 450px) {
+    .sub {
+        padding: 20px 10px;
+
+        .wugal {
+            .text {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .main-menu {
+        ul {
+            -webkit-column-gap: 20px;
+            column-gap: 20px;
+
+            .piggy-icon {
+                width: 50px;
+                height: 50px;
+                border: 3px solid #3B3738;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    footer {
+        .col-md-4 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
 }

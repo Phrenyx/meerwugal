@@ -1,38 +1,122 @@
-div.container.sub
-    div.row
-        div.col-md-12
-            h2 Meet the Piggies
-            
-    div.row#flynn
+div.image-container-mainpage
+  div.backdrop
+  div.text 
+    span.primary-color M
+    | eet the 
+    span.primary-color W
+    | ugal
+      
+  img(src="/image/IMG_3257.JPG").main-page
+  include ../_partials/carrot.html
+
+div.container.sub    
+    div.row.wugal#fynn
         div.col-md-4
-            a(data-src="/image/sub/IMG_3906.JPG") 
-              img.img-fluid.wow.bounceInLeft(src='/image/sub/IMG_3906_thumb.JPG')
+            div.image-wrap
+                a(data-src="/image/sub/IMG_3906.JPG") 
+                  img.img-fluid.wow.bounceInLeft(src='/image/sub/IMG_3906_thumb.JPG')
         
-        div.col-md-8
+        div.col-md-8.text
             h3 Fynn der Schüchtene
-            p Er ist der neueste im Harem und hat das Erbe von Panda und Krümel übernommen. Fynn ist zwar der kleinste in der Gruppe jedoch weiß er seine Männlichkeit auszuspielen. Sein Charakter entwickelt sich noch, jedoch merkt man schon deutlich das er am liebsten die Mädels auf Trab hält und durch die Gegend brommselt. Fynn ist der kleine Sonnenschein der Gruppe. Er wurde von einer Notstation aufgenommen.
+            p Kann große Töne spucken, ist aber der Erste der rennt.
+            p Kleine fiese Gurke, die bei nichts mitsprechen darf.
+            p Brommselt anstelle zu rennen.
         
-    div.row#gismo
-        div.col-md-8
+    div.row.wugal#gismo
+        div.col-md-8.text
             h3 Gismo der Gelassene
-            p Das süßeste Meerschweinchen das die Welt je sehen durfte. Leider war Gismo immer ein sehr krankes Meerschweinchen, da er die Narkose von der Kastration nicht gut vertrug. Er lebte die meiste Zeit mit Nierenprobleme, zusammen mit Panda in einer Böckchengruppe und verstarb nach 3 Jahren. 
-            p Gismo lernte Panda, Darius und Krümel kennen. Wobei Krümels Vergesellschaftung in die Böckchengruppe aufgrund von Pandas Sturrheit nicht erfolgreich war.
-            p Er war ein sehr handzahmes Meerschweinchen was auf seine ständige Pflege aufgrund seiner Krankheiten zurückzuführen war.
-            p Sein Lieblingsfutter waren immer wasserhaltiges Gemüse. Gurken, Paprika und Salat.
-            p Gismo wurde leider von einer Tierhandlung gekauft.
+            p Süßer kleiner Teddy. 
+            p Leider aber auch ein sehr kränklicher.
+            p Er lebte nach dem Motto "Ich lass dich in Ruhe und du dafür mich!"
             
         div.col-md-4
-            a(data-src="/image/sub/IMG_0202.JPG") 
-              img.img-fluid.wow.bounceInRight(src='/image/sub/IMG_0202_thumb.JPG')
+            div.image-wrap
+                a(data-src="/image/sub/IMG_0202.JPG") 
+                    img.img-fluid.wow.bounceInRight(src='/image/sub/IMG_0202_thumb.JPG')
                   
-    div.row#gismo
-      div.col-md-4
-          a(data-src="/image/sub/IMG_2632.JPG") 
-            img.img-fluid.wow.bounceInRight(src='/image/sub/IMG_2632_thumb.JPG')
-          
-      div.col-md-8
-          h3 Krümel der Merkwürdige
-          p Krümel war vermutlich eine lange Zeit alleine, bevor ich ihn übernommen hatte und das hat sichtlich an seinem Verhalten gezeigt.
-          p Er verstarb leider, ähnlich wie Gismo, an Nacheffekte von seiner Narkose aufgrund einer Blasenstein-OP
-          p Er besaß kein Lieblingsfutter und wurde auch aus einer Tierhandlung gekauft.
-          p Er lernte Gismo, Panda, Lucy, Luna und Lynn kennen. Wovon er sein Leben mit Lucy und später Luna und Lynn teilte.
+    div.row.wugal#krumel
+        div.col-md-4
+            div.image-wrap
+                a(data-src="/image/sub/IMG_2632.JPG") 
+                    img.img-fluid.wow.bounceInLeft(src='/image/sub/IMG_2632_thumb.JPG')
+                  
+        div.col-md-8.text
+            h3 Krümel der Merkwürdige
+            p Schnuppert bevor er zubeißt.
+            p Besaß einen dicken Hintern.
+            p Mag lieber chillen als Party.
+
+
+
+    div.row.wugal#lucy
+          div.col-md-8.text
+              h3 Lucy die Schnelle
+              p Die erste Dame die zum Wugal Gehege kam.
+              p Meisterin in "ich liege mal so flach als wäre ich tot, damit das Herrchen Panik schiebt".
+              p Schreien konnte sie wie eine Sirene.
+              
+          div.col-md-4
+              div.image-wrap
+                  a(data-src="/image/sub/IMG_1687.JPG") 
+                      img.img-fluid.wow.bounceInRight(src='/image/sub/IMG_1687_thumb.JPG')
+                          
+    div.row.wugal#luna
+        div.col-md-4
+            div.image-wrap
+                a(data-src="/image/sub/luna.jpg") 
+                  img.img-fluid.wow.bounceInLeft(src='/image/sub/luna_thumb.jpg')
+                
+        div.col-md-8.text
+            h3 Luna das Yin
+            p Bis heute Rätselt man wo bei diesem schwarzen Haarberg Vorne und Hinten ist..
+            p Teilt ihr Futter nicht gerne.
+            p Quietschen? Kein Thema. Macht sie dauernd wenn es Futter gibt
+            
+            
+    div.row.wugal#lyn
+        div.col-md-8.text
+            h3 Lyn das Yang
+            p Lyn ist das kleine Energiebündel
+            p Ihre Frisur ist ihr meistens egal, läuft lieber mit Stehfrisur rum.
+            p Ich dachte Lucy schreit... Nein Lyn schreit lauter.
+            
+        div.col-md-4
+            div.image-wrap
+                a(data-src="/image/sub/lyn.jpeg") 
+                    img.img-fluid.wow.bounceInRight(src='/image/sub/lyn_thumb.jpeg')
+                        
+    div.row.wugal#panda
+        div.col-md-4
+            div.image-wrap
+                a(data-src="/image/sub/IMG_0307.JPG") 
+                  img.img-fluid.wow.bounceInLeft(src='/image/sub/IMG_0307_thumb.JPG')
+                
+        div.col-md-8.text
+            h3 Panda der Charmeur
+            p Er war unangefochtener Charmeur aller Frauen und Säue.
+            p Eleganz wie ein Einhorn und ein Körperbau einer Gazelle.
+            p Liebte jedoch seine Kuschelsachen mehr als Alles andere.
+            
+    div.row.wugal#paula
+        div.col-md-8.text
+            h3 Paula die Scheue
+            p Sieht man nie. Außer wenn es Essen gibt.
+            p Schneller als der Wind, wenns drauf ankommt.
+            p Sitzt gerne in ihrem Häuschen und sieht andere beim Streiten zu.
+            
+        div.col-md-4
+            div.image-wrap
+                a(data-src="/image/sub/paula.jpg") 
+                    img.img-fluid.wow.bounceInRight(src='/image/sub/paula_thumb.jpg')
+                        
+    div.row.wugal#panda
+        div.col-md-4
+            div.image-wrap
+                a(data-src="/image/sub/IMG_0709.JPG") 
+                  img.img-fluid.wow.bounceInLeft(src='/image/sub/IMG_0709_thumb.JPG')
+                
+        div.col-md-8.text
+            h3 Sheela die Zicke
+            p Erste beim Essen.
+            p Bissig, laut, einfach nur eine Zicke.
+            p Springt ab und zu gerne über das Gehege wenn sie nicht auf das Essen warten will.
