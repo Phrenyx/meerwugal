@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+$body-font: 'Raleway', sans-serif;
+$main-color: #fac07c;
+$backdrop-color: #000;
+$second-color: #3B3738;
+
+body {
+  margin: 0;
+  font-family: $body-font;
+  font-size: 16px;
+  background: #E9E8E7;
+  overflow-x: hidden;
+}
+
+.primary-color {
+  color: $main-color;
+}
+
+a, a:visited {
+    color: inherit;
+
+    &:hover, &:active {
+        color: $main-color;
+    }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import "_modules/preloader-menu.scss";
+
+.image-container-mainpage {
+  position: relative;
+  width: 100%;
+  box-shadow: 0 6px 2px -2px gray;
+
+  .backdrop {
+    background: $backdrop-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
+
+  .text {
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 500%;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
+    -o-transform: translate(-50%,-50%); /** Opera **/
+    -moz-transform: translate(-50%,-50%); /** Firefox **/
+  }
+
+  #carrot {
+    position: absolute;
+    bottom: 30px;
+    width: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%); /** Chrome & Safari **/
+    -o-transform: translate(-50%); /** Opera **/
+    -moz-transform: translate(-50%); /** Firefox **/
+    cursor: pointer;
+    animation-name: schwebe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .main-page {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image-grid img {
+  transition: transform .2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.15);
+    transition: transform .2s;
+  }
+}
+
+.piggy-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.gismo {
+    background: url(/image/profile/gismo.jpg);
+    background-size: cover;
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+  }
+
+  &.krumel {
+    background: url(/image/profile/krümel.jpg);
+    background-size: cover;
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+  }
+
+  &.lucy {
+    background: url(/image/profile/lucy.jpg);
+    background-size: cover;
+    background-position: -15px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.luna {
+    background: url(/image/profile/luna.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.lyn {
+    background: url(/image/profile/lyn.JPG);
+    background-size: cover;
+    background-position: -10px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.panda {
+    background: url(/image/profile/panda.jpg);
+    background-size: cover;
+    background-position: -10px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.paula {
+    background: url(/image/profile/paula.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.sheela {
+    background: url(/image/profile/sheela.jpg);
+    background-size: cover;
+    background-position: -12px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &.fynn {
+    background: url(/image/profile/fynn.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+}
+
+.img-fluid {
+  margin-top: 30px;
+}
+
+.wow-removed {
+  visibility: visible !important;
+  animation-name: none !important;
+}
+
+footer {
+  background: $second-color;
+  margin-top: 30px;
+  border-top: 5px solid $main-color;
+  padding: 50px 0;
+  color: white;
+
+  a, a:visited {
+      color: inherit;
+
+      &:hover, &:active {
+          color: $main-color;
+      }
+  }
+
+  i {
+      font-size: 30px !important;
+  }
+
+  ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+          list-style: none;
+
+          a {
+              text-decoration: none;
+
+              &:hover {
+                  text-decoration: none;
+              }
+          }
+      }
+  }
+
+  .copyright {
+    display: block;
+    color: $main-color;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(59, 55, 56, 0.96);
+  display: none;
+
+  i.fa-times {
+    color: $main-color;
+    font-size: 300%;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .content {
+    img {
+      max-height: 900px;
+    }
+  }
+}
+
+.sub, .sub-owner {
+    padding: 20px 0;
+
+    .img-fluid {
+        margin-top: 0px;
+    }
+
+    .image-wrap {
+        img {
+            visibility: visible;
+            animation-name: bounceInRight;
+            height: 270px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .wugal {
+        padding: 10px 0 30px;
+
+        .text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .profile {
+        img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            margin: 30px 0;
+        }
+    }
+}
+
+@keyframes schwebe {
+  0%  {bottom: 30px;}
+  25% {bottom: 10px;}
+  50% {bottom: 30px;}
+  75% {bottom: 10px;}
+  100% {bottom: 30px;}
+}
+@keyframes fadeIn {
+  0%   {left: -300px;}
+  100% {left: 50px;}
+}
+
+@keyframes fadeOut {
+  0%   {left: 50px;}
+  100% {left: -300px;}
+}
+
+
+@media (max-width: 450px) {
+    .sub {
+        padding: 20px 10px;
+
+        .wugal {
+            .text {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .main-menu {
+        ul {
+            -webkit-column-gap: 20px;
+            column-gap: 20px;
+
+            .piggy-icon {
+                width: 50px;
+                height: 50px;
+                border: 3px solid #3B3738;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    footer {
+        .col-md-4 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
